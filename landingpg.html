@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/landingpg.css" class="css">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- new landingpg start-->
+  <header>
+
+    <div class="container">
+
+
+      <nav>
+        <a href="#" class="brand">
+          .collectiv
+        </a>
+        <Ul class="menu">
+          <li><a href="#">onep1</a> </li>
+          <li><a href="#">onep1</a> </li>
+          <li><a href="#">onep1</a> </li>
+          <li><a href="#">onep1</a> </li>
+          <li><a href="#">onep1</a> </li>
+
+        </Ul>
+      </nav>
+
+      <div class="header-body">
+        <div class="slider">
+          <div class="decoration-left anim">
+            discovered
+            <span class="material-icons-outline">
+              trending_flat
+            </span>
+
+          </div>
+
+          <div class="decoration-right anim"></div>
+          <div class="overlay anim"></div>
+
+          <img src="./img/lovkesh.jpeg" class="slider-img" alt="">
+
+        </div>
+
+        <div class="text">
+          <div>
+            <h1>
+              moder <br />
+              -minimal
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati excepturi dicta enim, ullam totam
+              possimus nostrum, dolorum aut quisquam labore assumenda porro repudiandae ad eveniet voluptatem cum quam
+              quia consequuntur?</p>
+
+          </div>
+        </div>
+
+        <ul class="social">
+          <li><a href="#">facebook</a></li>
+          <li><a href="#">facebook</a></li>
+          <li><a href="#">facebook</a></li>
+
+        </ul>
+
+      </div>
+
+
+
+      <nav class="header-bottom">
+        <div class="controls">
+          <span class="prev">prev</span>
+          <span class="next">next</span>
+        </div>
+
+        <ul class="pagination">
+          <li class="pag active"><span>01</span></li>
+          <li class="pag "><span>02</span></li>
+          <li class="pag "><span>03</span></li>
+          <li class="pag "><span>04</span></li>
+          <li class="pag "><span>05</span></li>
+        </ul>
+
+        <span>massy, paris</span>
+      </nav>
+
+    </div>
+
+
+
+
+
+    </div>
+
+  </header>
+
+  <!-- <script src="./js/landingpg.js"></script> -->
+
+  <script>
+    
+    const pag = document.querySelectorAll('.pag');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+const image = document.querySelector('.slider-img');
+const overlay = document.querySelector('.overlay');
+const anim = document.querySelectorAll('.anim');
+
+const r = document.querySelector(':root');
+const rs = getComputedStyle(r);
+
+let id = 0;
+
+const images = [
+  './img/lovkesh.jpeg',
+  './img/lovkesh2.jpeg',
+  './img/lovkesh3.jpeg',
+  './img/lovkesh4.jpeg',
+  './img/lovkesh2.jpeg',
+];
+
+const colors = [
+  '#feb57b',
+  '#ffa901',
+  '#b5162e',
+  '#27223f',
+  '#468cc2',
+];
+
+
+function retrigAnim() {
+  for (let i = 0; i < anim.lenght; i++) {
+    anim[i].style.animation = 'none';
+    anim[i].offsetHeight;
+    anim[i].style.animation = null;
+  }
+}
+
+function slider(i) {
+  retrigAnim();
+  img.src = images[i];
+
+  r.style.setProperty('--accent', colors[i]);
+
+  for (let i = 0; i < pag.lenght; i++) {
+    pag[i].classList.remove('active');
+  }
+  pag[i].classList.add('active');
+
+}
+
+for (let i = 0; i < pag.lenght; i++) {
+  pag[i].addEventListener('click', () => {
+    slider(i);
+    id = i;
+    stopAutoSlider()
+  });
+}
+
+
+
+  </script>
+</body>
+
+</html>

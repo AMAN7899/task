@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="./css/newpg.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+
+            <div class="logo">
+                <img src="" alt="">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="">about</a></li>
+                    <li><a href="">about</a></li>
+                    <li><a href="">about</a></li>
+                </ul>
+            </div>
+    </header>
+
+    <div class="slider-wrap">
+
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+
+                <div class="swiper-slide">
+                    <div class="slide-left">
+                        <h6 class="element">01</h6>
+                        <h1 class="element">wooden stool</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quis assumenda error tenetur
+                            dolor rem cupiditate dolorem sint voluptatibus corporis debitis, nesciunt iure similique,
+                            illum, enim architecto minus eum culpa?</p>
+                        <a class="element" href="#">read more</a>
+                    </div>
+                    <div class="slider-right">
+                        <img src="https://dubaitrippackages.files.wordpress.com/2017/11/2-imgdinosaurs_base.jpg" alt="">
+                    </div>
+                </div>
+
+
+                <div class="swiper-slide">
+                    <div class="slide-left">
+                        <h6 class="element">02</h6>
+                        <h1 class="element">wooden stool</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quis assumenda error tenetur
+                            dolor rem cupiditate dolorem sint voluptatibus corporis debitis, nesciunt iure similique,
+                            illum, enim architecto minus eum culpa?</p>
+                        <a class="element" href="#">read more</a>
+                    </div>
+                    <div class="slider-right">
+                        <img src="https://photographylife.com/wp-content/uploads/2016/06/Dragonfly.jpg" alt="">
+                    </div>
+                </div>
+
+
+                <div class="swiper-slide">
+                    <div class="slide-left">
+                        <h6 class="element">03</h6>
+                        <h1 class="element">wooden stool</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quis assumenda error tenetur
+                            dolor rem cupiditate dolorem sint voluptatibus corporis debitis, nesciunt iure similique,
+                            illum, enim architecto minus eum culpa?</p>
+                        <a class="element" href="#">read more</a>
+                    </div>
+                    <div class="slide-right">
+                        <img src="https://d2ub1k1pknil0e.cloudfront.net/media/images/camera-photography.width-1200.jpg"
+                            alt="">
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+
+
+    </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            const swiper = new Swiper('.swiper', {
+                // Optional parameters
+                loop: true,
+                effect: 'fade',
+                speed: 1500,
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+            });
+
+            anime({
+                targets: '.logo img',
+               rotate:360,
+                delay: 500,
+                opacity:[0,1],
+                easing: 'easeInOutQuart'
+            });
+            
+            anime({
+                targets: 'header',
+                scaleX:[0,1],
+                translateX: [-400,0],
+                opacity:[0,1],
+                easing: 'easeInOutQuart'
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
